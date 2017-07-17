@@ -22,9 +22,9 @@ module.exports = {
         expiresIn: '24h' // expires in 24 hours
     },
     redis: {
-        host:'192.168.1.200',
-        port:'6379',
-        password: ''
+        host: process.env.REDIS_HOST,
+        port: process.env.REDIS_PORT,
+        password: process.env.REDIS_PASSWORD
     }
 
 };
