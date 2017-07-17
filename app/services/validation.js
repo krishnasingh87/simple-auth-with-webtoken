@@ -5,7 +5,6 @@ const config = require('./../config');
 
 let validator = (req, res) => {
     let tokenVal = req.body.token;
-    console.log(tokenVal);
     const validateVal = validateTokenValue(tokenVal);
     if (validateVal.status){
         res.status(200).json(validateVal);
@@ -24,7 +23,6 @@ let validateTokenValue = (tokenVal) => {
         console.log(err.message);
     }
     
-    console.log(decoded);
     if (decoded){
         result.status = true;
         return result;
